@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+int main() {
+    int matrixA[3][3], matrixB[3][3], sumMatrix[3][3];
+    int i, j;
+
+    printf(" Enter elements for Matrix A \n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("Element [%d][%d]: ", i, j);
+            scanf("%d", &matrixA[i][j]);
+        }
+    }
+
+    printf("\n Enter elements for Matrix B \n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("Element [%d][%d]: ", i, j);
+            scanf("%d", &matrixB[i][j]);
+        }
+    }
+
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            sumMatrix[i][j] = matrixA[i][j] + matrixB[i][j];
+        }
+    }
+
+    
+    printf("\nMatrix A:\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("%d\t", matrixA[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\nMatrix B:\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("%d\t", matrixB[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\nResulting Sum Matrix S\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("%d\t", sumMatrix[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+} 
